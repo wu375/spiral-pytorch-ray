@@ -14,7 +14,7 @@ class SpiralConfig:
         self.batch_size = 64
         self.n_painters = self.batch_size
         self.optimizer = "adam"
-        self.checkpoint_interval = 3000
+        self.checkpoint_interval = 2000
         self.weight_copy_interval = 1
         self.log_interval = 20
         self.log_draw_interval = 50
@@ -22,9 +22,8 @@ class SpiralConfig:
         self.a2c_lr = 0.00005
         self.entropy_weight = 0.04
         self.value_weight = 1.0
-        self.training_steps_ratio = None # control d_steps/policy_steps. Only support value < ~10. Set to None if not constrained
+        self.training_steps_ratio = 5 # control d_steps/policy_steps. Only support value < ~10. Set to None if not constrained
         self.reward_mode = 'wgan' # 'l2' or 'wgan'
-        self.action_spec = self._get_action_spec()
         i = 0
         while os.path.isdir('train_log/run'+str(i)):
             i += 1
@@ -45,6 +44,7 @@ class SpiralConfig:
             "background": "white",
             "brushes_basedir": 'third_party/mypaint-brushes-1.3.0/',
         }
+        self.action_spec = self._get_action_spec()
 
 
     def _get_action_spec(self):

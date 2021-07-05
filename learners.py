@@ -125,7 +125,9 @@ class DiscLearner:
                 )
 
             if self.training_steps_ratio is not None:
-                while self.discriminator_step // ray.get(storage.get_info.remote("a2c_training_steps")) > self.training_steps_ratio:
+                a2c_training_steps = ray.get(storage.get_info.remote("a2c_training_steps"))
+                while a2c_training_steps > 0 and self.discriminator_step // a2c_training_steps > self.training_steps_ratio:
+                    a2c_training_steps = ray.get(storage.get_info.remote("a2c_training_steps"))
                     time.sleep(0.2)
 
 @ray.remote(num_gpus=1)
