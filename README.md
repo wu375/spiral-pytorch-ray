@@ -1,5 +1,5 @@
 # spiral_pytorch_ray
- The spiral paper (https://github.com/deepmind/spiral) training pipeline implementation in pytorch and ray
+ The original spiral paper (https://arxiv.org/abs/1804.01118) training pipeline implementation in pytorch and ray
 
 Requirements:
 2 GPUs. One for policy learning and one for discriminator learning.
