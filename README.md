@@ -33,6 +33,6 @@ Note that this training pipeline is for a single machine. Population-based explo
 
 <br/>
 
-## Credit to:
+## Also credit to:
 1. https://github.com/werner-duvaud/muzero-general. I learned about ray here.
 2. https://github.com/eriklindernoren/PyTorch-GAN/blob/master/implementations/wgan_gp/wgan_gp.py. I used the wgan-gp implementation here.
