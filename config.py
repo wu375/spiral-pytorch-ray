@@ -22,7 +22,9 @@ class SpiralConfig:
         self.a2c_lr = 0.00005
         self.entropy_weight = 0.04
         self.value_weight = 1.0
-        self.training_steps_ratio = 5 # control d_steps/policy_steps. Only support value < ~10. Set to None if not constrained
+        # control d_steps/policy_steps ratio. Only support value < ~10. Set to None if not constrained
+        # In my case, the ratio is at ~15 unconstrained.
+        self.training_steps_ratio = 5
         self.reward_mode = 'wgan' # 'l2' or 'wgan'
         i = 0
         while os.path.isdir('train_log/run'+str(i)):

@@ -142,7 +142,7 @@ class PolicyLearner:
         else:
             self.training_step = 0
 
-        self.a2c = A2C(config.action_spec, input_shape=(64, 64), grid_shape=(32, 32), action_order="libmypaint", cuda=True)
+        self.a2c = A2C(config.action_spec, input_shape=config.input_shape, grid_shape=config.grid_shape, action_order="libmypaint", cuda=True)
         if checkpoint is not None:
             self.a2c.set_weights(checkpoint['a2c_weights'])
         self.a2c.cuda()
