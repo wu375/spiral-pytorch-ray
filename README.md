@@ -21,6 +21,9 @@ Usage:
 ![Alt Text](examples/4_drawing_5.gif)
 
 <br/>
-<br/>
 
 ![Alt Text](examples/4_training.gif)
+
+<br/>
+
+![Alt Text](examples/4_curves.png)
