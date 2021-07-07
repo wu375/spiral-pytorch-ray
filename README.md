@@ -36,7 +36,7 @@ Note that this training pipeline is for a single machine. Population-based explo
 ## Possible differences from the original paper
 1. In the original paper, discriminator trains faster than policy because of network structure. \
 However in this implementation, discriminator trains faster because policy spends most of the time waiting for batches from painter agents.
-2. Policy trains on each trajectory for only once (which causes 1.) to be on-policy. But in the paper, they describe the training as off-policy.
+2. Policy trains on each trajectory for only once (which causes 1.) so that training is on-policy. But in the paper, they describe the training as off-policy.
 
 ## Also credit to:
 1. https://github.com/werner-duvaud/muzero-general. I learned about ray here.
