@@ -1,4 +1,4 @@
-# spiral_pytorch_ray
+# SPIRAL in pytorch and ray
  The original spiral paper (https://arxiv.org/abs/1804.01118) training pipeline implementation in pytorch and ray
 
 ## Requirements:
